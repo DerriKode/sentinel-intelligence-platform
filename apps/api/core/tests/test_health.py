@@ -7,3 +7,12 @@ class HealthEndpointTests(TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json(), {"status": "ok", "service": "sentinel-api", "version": "v1"})
+
+    def test_readiness_endpoint_confirms_database_access(self):
+        response = self.client.get("/api/v1/ready/")
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(
+            response.json(),
+            {"status": "ready", "service": "sentinel-api", "database": "ok", "version": "v1"},
+        )

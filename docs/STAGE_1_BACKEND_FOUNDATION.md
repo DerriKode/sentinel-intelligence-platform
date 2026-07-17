@@ -28,4 +28,4 @@ The model tests cover organization ownership, scoped uniqueness, cross-organizat
 
 ## Data and recovery notes
 
-The model is intentionally limited to authorization scope. Retention, legal hold, audit event storage, cases, evidence, biometric data, and workflow transitions require their own approved work packages. The test database is in-memory; the development default is local SQLite until S1-04 configures and verifies MySQL. No real records or sensitive fixtures are included.
+The model is intentionally limited to authorization scope. Retention, legal hold, audit event storage, cases, evidence, biometric data, and workflow transitions require their own approved work packages. No real records or sensitive fixtures are included.
