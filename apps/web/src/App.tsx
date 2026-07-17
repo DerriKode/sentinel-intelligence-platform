@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import { DataFeedbackPreview } from "./components/data-feedback";
 import { Button, FormComponentPreview, TextField } from "./components/forms";
 
 type FoundationState = "loading" | "empty" | "error" | "success" | "denied" | "validation";
@@ -192,6 +193,10 @@ function App() {
             <span aria-hidden="true">04</span>
             Form components
           </a>
+          <a className="nav-link" href="#data-feedback-components" onClick={() => closeNavigation(false)}>
+            <span aria-hidden="true">05</span>
+            Data and feedback
+          </a>
         </nav>
 
         <div className="sidebar-footer">
@@ -324,6 +329,7 @@ function App() {
           </div>
 
           <FormComponentPreview />
+          <DataFeedbackPreview />
         </main>
 
         <footer className="footer">

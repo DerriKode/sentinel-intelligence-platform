@@ -116,6 +116,15 @@ Checkpoint evidence is recorded in `docs/STAGE_1_FOUNDATION_CHECKPOINT.md`. Rema
 | Deliberate confirmation and focus restoration | Cross-cutting destructive-action rules; NFR-A11Y-001, NFR-A11Y-002 | Modal focus containment, Escape, busy-state, and restoration tests | Implemented |
 | Responsive, contrast-aware shared actions | NFR-A11Y-001 to NFR-A11Y-004 | Tokenized CSS, narrow/coarse/forced-color rules and contract tests | Implemented; browser review pending |
 
+## Stage 2 data and feedback traceability
+
+| Component obligation | Source requirement/NFR | Evidence | Status |
+|---|---|---|---|
+| Scoped tables, filters, metrics, and pagination | FR-102, FR-301, FR-401, FR-501, FR-701, FR-1101; NFR-SEC-001, NFR-PERF-003 | Native table/filter/pagination contracts and 16 focused tests | Client foundation implemented; API scope enforcement pending |
+| Explicit loading, empty, error, success, denied, and validation outcomes | Cross-cutting state rules; NFR-A11Y-001, NFR-A11Y-002, NFR-RES-003 | `ApplicationState`, `Alert`, table-state substitution, live-region tests | Implemented |
+| Keyboard-safe dialogs and drawers | Cross-cutting action rules; NFR-A11Y-001, NFR-A11Y-002 | Modal naming, Tab containment, Escape, scroll lock, restoration tests | Implemented |
+| Responsive and non-color data presentation | NFR-A11Y-001 to NFR-A11Y-004, NFR-PERF-002 | Text-bearing badges, focusable table region, tablet/mobile/coarse/forced-color CSS | Implemented; browser review pending |
+
 ## Stage 0 checkpoint traceability
 
 | Quality gate area | Stage 0 evidence | Runtime status |

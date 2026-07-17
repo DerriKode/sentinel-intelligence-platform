@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import App from "./App";
@@ -43,11 +43,12 @@ describe("frontend foundation", () => {
   ])("renders the %s state with an actionable message", async (label, title) => {
     const user = userEvent.setup();
     render(<App />);
+    const statePreview = screen.getByRole("group", { name: "Foundation state preview" });
 
-    await user.click(screen.getByRole("button", { name: label }));
+    await user.click(within(statePreview).getByRole("button", { name: label }));
 
     expect(screen.getByRole("heading", { name: title })).toBeVisible();
-    expect(screen.getByRole("button", { name: label })).toHaveAttribute("aria-pressed", "true");
+    expect(within(statePreview).getByRole("button", { name: label })).toHaveAttribute("aria-pressed", "true");
     expect(screen.getByRole("heading", { name: title }).closest("[role]")).toHaveAttribute(
       "role",
       label === "Error" ? "alert" : "status"
@@ -73,14 +74,15 @@ describe("frontend foundation", () => {
   it("marks loading as busy and announces completion states atomically", async () => {
     const user = userEvent.setup();
     render(<App />);
+    const statePreview = screen.getByRole("group", { name: "Foundation state preview" });
 
-    await user.click(screen.getByRole("button", { name: "Loading" }));
+    await user.click(within(statePreview).getByRole("button", { name: "Loading" }));
     const loadingState = screen.getByRole("heading", { name: "Preparing your workspace" }).closest("[role]");
     expect(loadingState).toHaveAttribute("role", "status");
     expect(loadingState).toHaveAttribute("aria-busy", "true");
     expect(loadingState).toHaveAttribute("aria-atomic", "true");
 
-    await user.click(screen.getByRole("button", { name: "Success" }));
+    await user.click(within(statePreview).getByRole("button", { name: "Success" }));
     const successState = screen.getByRole("heading", { name: "The foundation is ready" }).closest("[role]");
     expect(successState).toHaveAttribute("aria-busy", "false");
     expect(successState).toHaveAttribute("aria-live", "polite");

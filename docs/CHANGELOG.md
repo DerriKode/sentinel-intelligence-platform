@@ -53,3 +53,11 @@ No application source, package dependency, runtime configuration, production dat
 - Added keyboard focus containment and restoration, announced errors and statuses, responsive action layouts, coarse-pointer sizing, and forced-color support.
 - Recorded that client upload checks are guidance only and that all authorization, content, and file controls require server enforcement.
 - Added 8 focused component tests; the full 37-test suite, accessibility suite, lint, typecheck, and production build pass.
+
+## 2026-07-17 - Stage 2 data and feedback components
+
+- Recorded `APPROVE COMPONENT SYSTEM` and continued to the approved shared data/feedback scope.
+- Added cards, semantic metrics, text-bearing badges, responsive native tables, named filter forms, bounded pagination, alerts, dialogs, drawers, and six application states.
+- Added a clearly synthetic local preview for filtering, pagination, status, dialog, and drawer behavior without API or storage operations.
+- Added keyboard focus containment/restoration, Escape behavior, safe empty/error/denied states, 48 px coarse targets, and forced-color support.
+- Added 16 focused tests; the full 53-test suite, accessibility suite, lint, typecheck, and production build pass.
