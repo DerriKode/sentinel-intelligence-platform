@@ -72,6 +72,14 @@ Non-functional budgets and performance thresholds are defined provisionally in `
 
 Checkpoint evidence is recorded in `docs/STAGE_1_FOUNDATION_CHECKPOINT.md`. Remaining performance, recovery, live-worker, browser-session, and production-security evidence is intentionally deferred to the stages where those capabilities exist.
 
+## Stage 2 design-direction traceability
+
+| Design obligation | Source requirements/NFR | Design evidence | Status |
+|---|---|---|---|
+| Calm, task-oriented internal and public experience | FR-301, FR-401, FR-601, FR-701; NFR-A11Y-001, NFR-PERF-002 | `docs/STAGE_2_DESIGN_DIRECTION.md` experience principles and layout contract | Proposed; approval pending |
+| Accessible, responsive, state-complete components | Cross-cutting acceptance rules; NFR-A11Y-001 to NFR-A11Y-005 | Required state and acceptance matrix | Proposed; implementation verification required |
+| Permission, privacy, evidence, and human-review language | FR-102, FR-103, FR-501, FR-502, FR-701, FR-801, FR-802, FR-1001; NFR-SEC-001, NFR-PRIV-001, NFR-PRIV-002 | Role/privacy expression and prohibited patterns | Proposed; security review required per workflow |
+
 ## Stage 0 checkpoint traceability
 
 | Quality gate area | Stage 0 evidence | Runtime status |

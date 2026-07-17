@@ -17,3 +17,10 @@ No application source, package dependency, runtime configuration, production dat
 - Recorded prior passing frontend typecheck, lint, tests, and build evidence from S1-07.
 - Recorded the subsequent frontend clean-install registry failure, unavailable Redis service, and deferred manual browser verification as explicit limitations.
 - Added the Stage 1 checkpoint evidence and requested `APPROVE STAGE 1`.
+
+## 2026-07-17 - Stage 2 design direction proposal
+
+- Formalized calm enterprise authority as the shared visual direction for internal and public portals.
+- Added UI state, accessibility, responsive, privacy, security, human-review, and prohibited-pattern guardrails.
+- Linked the design direction to requirements and recorded decision D-013.
+- Requested `APPROVE DESIGN DIRECTION`; information architecture remains gated.

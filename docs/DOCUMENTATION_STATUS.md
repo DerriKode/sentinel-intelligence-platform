@@ -1,7 +1,7 @@
 # User, API, and Operations Documentation Status
 
-**Checkpoint:** S1-08
-**Status:** Stage 1 foundation checkpoint recorded; Stage 2 approval pending
+**Checkpoint:** S2-01
+**Status:** Stage 2 design direction proposed; `APPROVE DESIGN DIRECTION` pending
 
 ## Available now
 
@@ -9,6 +9,7 @@
 - API behavior is represented by functional requirement IDs and authorization conditions; the backend foundation exists, while versioned endpoint contracts remain deferred.
 - Operations expectations, health, logging, backup, restore, monitoring, and runbook budgets are documented; setup, local services, status, and quality-check workflows are recorded in the Stage 1 documents.
 - Security, privacy, accessibility, and AI human-review rules are documented for implementation.
+- Shared visual personality, interaction principles, prohibited patterns, state requirements, and UI privacy/security guardrails are documented in `STAGE_2_DESIGN_DIRECTION.md`.
 
 ## Deferred until foundation and workflow implementation
 
@@ -19,4 +20,6 @@
 | Operations documentation | Local setup, status, health-check, and service boundaries recorded | Monitoring, backup/restore, incident, deployment, and rollback runbooks |
 | Accessibility evidence | Source tests and responsive/reduced-motion rules recorded; browser session deferred | Keyboard, screen-reader, responsive, contrast, and browser evidence |
 
-No documentation gap blocks blueprint approval; these are Stage 1+ deliverables and must not be fabricated before the underlying behavior exists.
+The Stage 2 design direction is a proposal until the approval gate is observed. Information architecture and role-specific page implementation remain deferred to the next approved work packages.
+
+No documentation gap blocks design-direction approval; downstream artifacts must not be fabricated before the underlying behavior exists.

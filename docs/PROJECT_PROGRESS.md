@@ -1,10 +1,10 @@
 # Project Progress
 
-**Current phase:** Stage 1 - Repository and Technical Foundation
-**Current work package:** S1-08 - Stage 1 Foundation Checkpoint
+**Current phase:** Stage 2 - Enterprise UI/UX Foundation
+**Current work package:** S2-01 - Define Enterprise Design Direction
 **Repository:** `sentinel-intelligence-platform`
-**Implementation:** Foundation complete; workflow implementation deferred to later stages
-**Approval state:** Awaiting `APPROVE STAGE 1`
+**Implementation:** Stage 2 design direction proposed; information architecture deferred
+**Approval state:** Awaiting `APPROVE DESIGN DIRECTION`
 
 ## Completed work packages
 
@@ -27,8 +27,9 @@
 | S1-05 | `3de3030` | Redis/Celery foundation and isolated test configuration established |
 | S1-06 | `3ffd877` | Windows setup, service, status, and verification scripts established |
 | S1-07 | `b02688e` | Quality tooling, lockfile, checks, and CI workflow established |
-| S1-08 | Pending checkpoint commit | Foundation evidence reviewed; formal approval requested |
+| S1-08 | `253c723` | Foundation evidence reviewed; Stage 1 approval requested |
+| S2-01 | Pending approval commit | Calm enterprise design direction, UI state contract, and prohibited patterns documented |
 
 ## Next gate
 
-Observe `APPROVE STAGE 1`, then begin `prompts/03_stage2_ui_ux/S2-01_DEFINE_ENTERPRISE_DESIGN_DIRECTION.md`.
+Observe `APPROVE DESIGN DIRECTION`, then begin `prompts/03_stage2_ui_ux/S2-02_FINALIZE_INFORMATION_ARCHITECTURE.md`.

@@ -14,5 +14,6 @@
 | D-010 | Use eager/memory Celery settings for isolated tests until a Redis service is available; do not treat this as live-worker evidence | `STAGE_1_REDIS_CELERY_CONFIGURATION.md`, `STAGE_1_FOUNDATION_CHECKPOINT.md` | Locked with limitation |
 | D-011 | Use the Windows setup, service, status, and check scripts as the supported local workflow; service actions remain explicit and reversible | `STAGE_1_LOCAL_SETUP_AND_SERVICES.md`, `STAGE_1_FOUNDATION_CHECKPOINT.md` | Locked for foundation |
 | D-012 | Stage 2 may not begin until `APPROVE STAGE 1` is observed | `STAGE_1_FOUNDATION_CHECKPOINT.md` | Pending approval |
+| D-013 | Use calm enterprise authority as the shared visual direction: restrained semantic tokens, task clarity, evidence-aware content, accessible states, and no sensational or decorative dashboard patterns | `STAGE_2_DESIGN_DIRECTION.md` | Pending `APPROVE DESIGN DIRECTION` |
 
 Material changes require an architecture, security, data, or scope decision record before implementation proceeds.
