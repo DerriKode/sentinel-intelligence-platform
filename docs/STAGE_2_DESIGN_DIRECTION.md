@@ -1,7 +1,7 @@
 # Stage 2 Design Direction
 
 **Work package:** S2-01 — Define Enterprise Design Direction
-**Status:** Proposed; awaiting `APPROVE DESIGN DIRECTION`
+**Status:** Approved by team on 2026-07-17
 **Date:** 2026-07-17
 **Applies to:** Unified internal portal and separate public portal
 
@@ -104,10 +104,10 @@ Every major page and reusable data component must specify and test:
 
 ## Approval gate
 
-This direction formalizes the existing Stage 1 calm enterprise foundation. It is not approved for downstream UI implementation until the team provides:
+This direction formalizes the existing Stage 1 calm enterprise foundation. The team approved it with:
 
 `APPROVE DESIGN DIRECTION`
 
-Exact next external prompt after approval:
+The approved direction is implemented through the subsequent Stage 2 work packages, beginning with:
 
 `prompts/03_stage2_ui_ux/S2-02_FINALIZE_INFORMATION_ARCHITECTURE.md`

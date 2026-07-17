@@ -80,6 +80,15 @@ Checkpoint evidence is recorded in `docs/STAGE_1_FOUNDATION_CHECKPOINT.md`. Rema
 | Accessible, responsive, state-complete components | Cross-cutting acceptance rules; NFR-A11Y-001 to NFR-A11Y-005 | Required state and acceptance matrix | Proposed; implementation verification required |
 | Permission, privacy, evidence, and human-review language | FR-102, FR-103, FR-501, FR-502, FR-701, FR-801, FR-802, FR-1001; NFR-SEC-001, NFR-PRIV-001, NFR-PRIV-002 | Role/privacy expression and prohibited patterns | Proposed; security review required per workflow |
 
+## Stage 2 information-architecture traceability
+
+| IA obligation | Source requirements/workflows | Evidence | Status |
+|---|---|---|---|
+| Separate internal and public trust/navigation boundaries | FR-101, FR-102, FR-701; CW-01, CW-02 | `/app/*` and `/public/*` route trees in `STAGE_2_INFORMATION_ARCHITECTURE.md` | Locked; implementation pending |
+| Role-aware navigation with independent authorization | FR-102, FR-201, FR-401, FR-501, FR-502, FR-801, FR-802, FR-1101 | Internal navigation groups, role visibility matrix, and route guards | Locked; permission tests required |
+| Safe public reporting and tracking | FR-701; NFR-SEC-005, NFR-PRIV-002 | Public route hierarchy and privacy boundaries | Locked; API/rate-limit tests required |
+| Accessible and responsive navigation | Cross-cutting acceptance rules; NFR-A11Y-001 to NFR-A11Y-005 | Navigation behavior and verification contract | Locked; component/browser tests required |
+
 ## Stage 0 checkpoint traceability
 
 | Quality gate area | Stage 0 evidence | Runtime status |

@@ -24,3 +24,10 @@ No application source, package dependency, runtime configuration, production dat
 - Added UI state, accessibility, responsive, privacy, security, human-review, and prohibited-pattern guardrails.
 - Linked the design direction to requirements and recorded decision D-013.
 - Requested `APPROVE DESIGN DIRECTION`; information architecture remains gated.
+
+## 2026-07-17 - Stage 2 information architecture
+
+- Recorded team approval of the calm enterprise design direction.
+- Locked separate internal `/app/*` and public `/public/*` route trees.
+- Defined navigation groups, nested routes, role visibility, safe route outcomes, accessibility behavior, and route-level verification obligations.
+- Added decision D-014 and risk R-013 for navigation-versus-authorization leakage.
