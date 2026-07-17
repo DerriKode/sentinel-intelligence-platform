@@ -31,3 +31,10 @@ No application source, package dependency, runtime configuration, production dat
 - Locked separate internal `/app/*` and public `/public/*` route trees.
 - Defined navigation groups, nested routes, role visibility, safe route outcomes, accessibility behavior, and route-level verification obligations.
 - Added decision D-014 and risk R-013 for navigation-versus-authorization leakage.
+
+## 2026-07-17 - Stage 2 design tokens and typography
+
+- Added centralized primitive and semantic color, typography, spacing, radius, border, shadow, motion, breakpoint-reference, z-index, control, and layout tokens.
+- Refactored the global shell and state styles to consume shared semantic tokens without changing application behavior.
+- Added token-contract tests for required families, state/focus semantics, raw component colors, breakpoint alignment, and reduced motion.
+- Kept the system font stack dependency-free and documented native CSS media-query token limitations.

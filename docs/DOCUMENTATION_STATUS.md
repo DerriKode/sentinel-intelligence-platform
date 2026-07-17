@@ -1,7 +1,7 @@
 # User, API, and Operations Documentation Status
 
-**Checkpoint:** S2-02
-**Status:** Design direction approved; information architecture locked
+**Checkpoint:** S2-03
+**Status:** Design direction and information architecture locked; token implementation recorded
 
 ## Available now
 
@@ -11,6 +11,7 @@
 - Security, privacy, accessibility, and AI human-review rules are documented for implementation.
 - Shared visual personality, interaction principles, prohibited patterns, state requirements, and UI privacy/security guardrails are documented in `STAGE_2_DESIGN_DIRECTION.md`.
 - Internal/public navigation, canonical route hierarchies, role visibility, safe route outcomes, and route verification obligations are documented in `STAGE_2_INFORMATION_ARCHITECTURE.md`.
+- Central colors, typography, spacing, shape, motion, breakpoint references, layout values, accessibility rationale, verification, and limitations are documented in `STAGE_2_DESIGN_TOKENS_AND_TYPOGRAPHY.md`.
 
 ## Deferred until foundation and workflow implementation
 
@@ -21,6 +22,6 @@
 | Operations documentation | Local setup, status, health-check, and service boundaries recorded | Monitoring, backup/restore, incident, deployment, and rollback runbooks |
 | Accessibility evidence | Source tests and responsive/reduced-motion rules recorded; browser session deferred | Keyboard, screen-reader, responsive, contrast, and browser evidence |
 
-The Stage 2 design direction is approved. Route components and role-specific pages remain deferred to the following approved work packages.
+The Stage 2 design direction is approved. Accessibility/responsive components, shells, navigation, shared states, and role-specific pages remain deferred to the following work packages.
 
 No documentation gap blocks design-direction approval; downstream artifacts must not be fabricated before the underlying behavior exists.

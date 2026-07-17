@@ -89,6 +89,15 @@ Checkpoint evidence is recorded in `docs/STAGE_1_FOUNDATION_CHECKPOINT.md`. Rema
 | Safe public reporting and tracking | FR-701; NFR-SEC-005, NFR-PRIV-002 | Public route hierarchy and privacy boundaries | Locked; API/rate-limit tests required |
 | Accessible and responsive navigation | Cross-cutting acceptance rules; NFR-A11Y-001 to NFR-A11Y-005 | Navigation behavior and verification contract | Locked; component/browser tests required |
 
+## Stage 2 token and typography traceability
+
+| Token obligation | Source requirement/NFR | Evidence | Status |
+|---|---|---|---|
+| Semantic state colors and non-color meaning | Cross-cutting state rules; NFR-A11Y-001, NFR-A11Y-003 | `tokens.css`, existing state text/structure, `tokens.test.ts` | Implemented; contextual contrast review continues |
+| Keyboard focus and reduced motion | NFR-A11Y-001, NFR-A11Y-002 | Dual-contrast focus tokens and reduced-motion global rule | Implemented; browser review required |
+| Responsive spacing, typography, breakpoints, and layout | NFR-A11Y-004, NFR-PERF-002 | Central type/layout tokens and 320 px/mobile/tablet foundations | Implemented; viewport review required |
+| Dependency-free and operationally safe fonts | NFR-OPS-001, NFR-PERF-002, NFR-PRIV-002 | System font stack with no external request or package | Implemented |
+
 ## Stage 0 checkpoint traceability
 
 | Quality gate area | Stage 0 evidence | Runtime status |
