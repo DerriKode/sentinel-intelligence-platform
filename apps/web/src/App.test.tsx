@@ -23,10 +23,10 @@ describe("frontend foundation", () => {
     const user = userEvent.setup();
     render(<App />);
 
-    await user.click(screen.getByRole("button", { name: label, exact: true }));
+    await user.click(screen.getByRole("button", { name: label }));
 
     expect(screen.getByRole("heading", { name: title })).toBeVisible();
-    expect(screen.getByRole("button", { name: label, exact: true })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByRole("button", { name: label })).toHaveAttribute("aria-pressed", "true");
   });
 
   it("announces validation errors and accepts a corrected value", async () => {
@@ -34,7 +34,7 @@ describe("frontend foundation", () => {
     render(<App />);
 
     await user.click(screen.getByRole("button", { name: "Save placeholder" }));
-    expect(screen.getByRole("alert", { name: "Enter a workspace label before continuing." })).toBeVisible();
+    expect(screen.getByRole("alert")).toHaveTextContent("Enter a workspace label before continuing.");
     expect(screen.getByRole("textbox", { name: "Workspace label" })).toHaveAttribute("aria-invalid", "true");
 
     await user.type(screen.getByRole("textbox", { name: "Workspace label" }), "Central operations");
