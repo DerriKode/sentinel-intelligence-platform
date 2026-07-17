@@ -51,3 +51,11 @@ Non-functional budgets and performance thresholds are defined provisionally in `
 | Resilience and recovery | NFR-RES-001 to NFR-RES-005 | FR-103, FR-501, FR-502, FR-901, FR-1201; CW-04, CW-06, CW-08 | Backup/restore report, failure injection, integrity and audit reconstruction |
 | Accessibility and browser support | NFR-A11Y-001 to NFR-A11Y-005 | All user-facing FRs; CW-01 to CW-08 | Keyboard, contrast, screen-reader, responsive, and browser matrix |
 | Operations and observability | NFR-OPS-001 to NFR-OPS-006 | FR-103, FR-801, FR-901, FR-1101, FR-1201; CW-01, CW-05, CW-06, CW-08 | Timed setup, health checks, logs, monitoring, runbooks, and capacity evidence |
+
+## Architecture and governance traceability
+
+| Locked decision | Source requirements or workflows | Governing document | Verification evidence |
+|---|---|---|---|
+| Modular monolith, module ownership, and trust boundaries | All FRs; CW-01 to CW-08 | `docs/ARCHITECTURE_AND_MODULE_BOUNDARIES.md` | Architecture review, dependency checks, API boundary tests |
+| MySQL authority, protected media, logical entities, retention, and custody | FR-301, FR-401, FR-501, FR-502, FR-1201; CW-03, CW-04, CW-08 | `docs/DATA_MODEL_AND_DATA_GOVERNANCE.md` | Migration, relationship, hash, retention, backup, and restore tests |
+| Deny-by-default roles, threats, upload, audit, and AI human review | FR-101, FR-102, FR-103, FR-501, FR-701, FR-801, FR-802, FR-901, FR-1001; CW-01, CW-02, CW-04 to CW-07 | `docs/SECURITY_ROLE_AND_AI_GOVERNANCE.md` | Negative authorization, threat-control, secure-upload, audit, candidate-review, and incident tests |
