@@ -79,3 +79,12 @@ No application source, package dependency, runtime configuration, production dat
 - Preserved the public/internal trust boundary and safe URL rules; no staff context, internal records, identifiers, tracking secrets, forms, API calls, analytics, storage, or fabricated translations were introduced.
 - Added inert compact navigation, first-link focus, Escape/close/scrim restoration, current-route semantics, public document titles, and route-heading focus.
 - Added 15 focused tests; the full 78-test suite, lint, typecheck, and 54-module production build pass. `/public` returned HTTP 200; browser visual inspection remains pending.
+
+## 2026-07-17 - Stage 2 dashboard data architecture
+
+- Recorded `APPROVE PUBLIC PORTAL DESIGN` and closed the S2-08 approval gate.
+- Locked dashboard composition and widget contracts for KPI, queue, workload, activity, health, and visualization data.
+- Defined separate administrator, supervisor, investigator, evidence-officer, and auditor dashboard obligations and exclusions.
+- Required server-scoped totals and rows, source/freshness labels, safe partial and stale states, bounded queries, context-aware cache isolation, and aggregate/detail reconciliation.
+- Prohibited hidden-scope leakage, fake zeroes, punitive staff rankings, autonomous decisions, guilt/risk scoring, and inaccessible or decorative charts.
+- Recorded implementation decisions that remain open without weakening authorization, privacy, provenance, human review, accessibility, or truthful-state rules.

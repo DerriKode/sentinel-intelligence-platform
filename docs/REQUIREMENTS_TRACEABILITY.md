@@ -143,6 +143,15 @@ Checkpoint evidence is recorded in `docs/STAGE_1_FOUNDATION_CHECKPOINT.md`. Rema
 | Reviewed-language availability rather than fabricated localization | Public multilingual mission; NFR-A11Y-001 | English enabled, Twi disabled with accessible unavailable description, and language-choice tests | Foundation implemented; Twi translation/review pending |
 | Mobile-first public navigation and complete page states | Cross-cutting state rules; NFR-A11Y-001 to NFR-A11Y-004, NFR-RES-003 | Inert compact navigation, focus restoration, title/focus tests, six public states, and responsive CSS contracts | Implemented; browser review pending |
 
+## Stage 2 dashboard data architecture traceability
+
+| Dashboard obligation | Source requirement/NFR | Evidence | Status |
+|---|---|---|---|
+| Server-scoped role dashboards and safe drill-downs | FR-101 to FR-103, FR-201, FR-401, FR-501, FR-701, FR-801, FR-802, FR-901, FR-1101; NFR-SEC-001 | Five allow-listed role contracts, exclusions, context invalidation, and negative-test obligations in `STAGE_2_DASHBOARD_DATA_ARCHITECTURE.md` | Contract locked; API enforcement pending |
+| Truthful KPI, queue, workload, activity, health, and visualization data | FR-401, FR-501, FR-801, FR-901, FR-1001, FR-1101; NFR-PRIV-002, NFR-OPS-005 | Shared widget definitions, provenance, units, time windows, human-review language, and prohibited patterns | Contract locked; metric definitions pending |
+| Bounded, fresh, resilient operational reads | NFR-PERF-001, NFR-PERF-004, NFR-PERF-006, NFR-RES-003, NFR-OPS-002 to NFR-OPS-005 | Freshness classes, partial/stale recovery, correlation IDs, bounded pagination, query/cache controls, and reconciliation tests | Contract locked; runtime measurement pending |
+| Accessible, responsive, non-misleading presentation | NFR-A11Y-001 to NFR-A11Y-005, NFR-PERF-002 | Text summaries, table alternatives, non-color meaning, keyboard behavior, 320 px/zoom/preferences obligations, and visualization prohibitions | Contract locked; role-dashboard UI evidence pending |
+
 ## Stage 0 checkpoint traceability
 
 | Quality gate area | Stage 0 evidence | Runtime status |

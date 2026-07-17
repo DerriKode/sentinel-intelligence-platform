@@ -1,7 +1,7 @@
 # Academic Evidence Baseline
 
-**Checkpoint:** S1-08
-**Status:** Stage 1 foundation evidence recorded; workflow and production evidence pending
+**Checkpoint:** S2-09
+**Status:** Stage 2 dashboard information architecture recorded; runtime dashboard evidence pending
 
 ## Evidence mapping
 
@@ -37,6 +37,7 @@ The checkpoint does not claim production readiness or outcomes that were not mea
 | Reusable data and feedback interaction design | `STAGE_2_DATA_AND_FEEDBACK_COMPONENTS.md`, focused component tests | Table, filter, pagination, state, alert, dialog, and drawer behavior observed |
 | Permission-aware internal workspace composition | `STAGE_2_INTERNAL_APPLICATION_SHELL.md`, focused shell/application tests | Capability filtering, context, landmarks, workspace states, compact navigation, and focus behavior observed |
 | Separate privacy-aware public service composition | `STAGE_2_PUBLIC_PORTAL_SHELL.md`, focused public-shell/application tests | Public/internal isolation, shallow safe routes, language availability, privacy/emergency copy, states, mobile navigation, and focus behavior observed |
+| Role-specific operational information architecture | `STAGE_2_DASHBOARD_DATA_ARCHITECTURE.md` | KPI, queue, workload, activity, health, visualization, authorization, provenance, freshness, resilience, accessibility, and verification contracts recorded |
 | Honest evaluation limitations | Stage 2 documents and `RISK_REGISTER.md` | Browser visual inspection and server-side upload enforcement remain explicit future evidence |
 
 Evidence must be observed, dated, reproducible, and linked to a requirement or budget. No screenshot, runtime result, API example, migration, or performance claim is invented at this checkpoint.

@@ -1,7 +1,7 @@
 # Stage 2 Public Portal Shell
 
 **Work package:** S2-08 — Build Public Portal Shell
-**Status:** Implemented; approval and browser visual verification pending
+**Status:** Implemented and approved; browser visual verification pending
 **Date:** 2026-07-17
 
 ## Implemented capability
@@ -45,12 +45,10 @@ Public loading, empty, error, success, unavailable/denied, and validation states
 
 The connected browser service reported no available browser session. Visual checks at 320 px, mobile, tablet, desktop, zoom, reduced motion, and forced colors remain required at the Stage 2 checkpoint.
 
-## Approval gate
+## Approval outcome
 
-Stop until the team provides:
+The team provided `APPROVE PUBLIC PORTAL DESIGN` on 2026-07-17. Browser visual verification remains a later checkpoint obligation and does not reopen the completed design approval.
 
-`APPROVE PUBLIC PORTAL DESIGN`
-
-Exact next external prompt after approval:
+Exact next external prompt:
 
 `prompts/03_stage2_ui_ux/S2-09_DEFINE_DASHBOARD_DATA_ARCHITECTURE.md`

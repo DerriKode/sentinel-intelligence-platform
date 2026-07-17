@@ -1,10 +1,10 @@
 # Project Progress
 
 **Current phase:** Stage 2 - Enterprise UI/UX Foundation
-**Current work package:** S2-08 - Build Public Portal Shell
+**Current work package:** S2-09 - Define Dashboard Data Architecture
 **Repository:** `sentinel-intelligence-platform`
-**Implementation:** Separate mobile-first public shell, language, privacy, and navigation foundation implemented
-**Approval state:** Public portal design approval pending; browser visual check deferred
+**Implementation:** Role-specific KPI, queue, workload, activity, health, and visualization contracts locked
+**Approval state:** Public portal design approved; administrator-dashboard implementation is next
 
 ## Completed work packages
 
@@ -35,8 +35,9 @@
 | S2-05 | `4f846de` | Shared buttons, fields, validation, upload states, and keyboard-safe confirmation implemented and approved |
 | S2-06 | `d9e3045` | Shared cards, metrics, badges, tables, filters, pagination, overlays, alerts, and states implemented |
 | S2-07 | `aa00718` | Responsive capability-informed internal shell, navigation, context, workspace states, and focus behavior implemented and approved |
-| S2-08 | Current change | Separate mobile-first public layout, shallow navigation, language availability, privacy boundary, and safe states implemented |
+| S2-08 | `c9e8f26` | Separate mobile-first public layout, shallow navigation, language availability, privacy boundary, and safe states implemented and approved |
+| S2-09 | Current change | Role-specific dashboard read models, widget contracts, security boundaries, freshness, states, and verification obligations locked |
 
 ## Next gate
 
-Request `APPROVE PUBLIC PORTAL DESIGN`. After approval, begin `prompts/03_stage2_ui_ux/S2-09_DEFINE_DASHBOARD_DATA_ARCHITECTURE.md`.
+Begin `prompts/03_stage2_ui_ux/S2-10_BUILD_ADMINISTRATOR_DASHBOARD.md`.
