@@ -1,7 +1,7 @@
 # Stage 1 Repository Structure
 
-**Status:** S1-01 complete  
-**Date:** 2026-07-17  
+**Status:** S1-01 complete
+**Date:** 2026-07-17
 **Scope:** Directory structure and environment placeholders only
 
 ## Approved structure
