@@ -10,3 +10,10 @@
 - Assembled the Blueprint Version 1 checkpoint; approval is pending.
 
 No application source, package dependency, runtime configuration, production data, or external governance-pack file has been added.
+
+## 2026-07-17 - Stage 1 foundation checkpoint
+
+- Verified repository safety, backend quality, migration drift, backend tests, and Windows operational checks.
+- Recorded prior passing frontend typecheck, lint, tests, and build evidence from S1-07.
+- Recorded the subsequent frontend clean-install registry failure, unavailable Redis service, and deferred manual browser verification as explicit limitations.
+- Added the Stage 1 checkpoint evidence and requested `APPROVE STAGE 1`.

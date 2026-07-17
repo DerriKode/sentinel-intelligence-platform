@@ -60,6 +60,18 @@ Non-functional budgets and performance thresholds are defined provisionally in `
 | MySQL authority, protected media, logical entities, retention, and custody | FR-301, FR-401, FR-501, FR-502, FR-1201; CW-03, CW-04, CW-08 | `docs/DATA_MODEL_AND_DATA_GOVERNANCE.md` | Migration, relationship, hash, retention, backup, and restore tests |
 | Deny-by-default roles, threats, upload, audit, and AI human review | FR-101, FR-102, FR-103, FR-501, FR-701, FR-801, FR-802, FR-901, FR-1001; CW-01, CW-02, CW-04 to CW-07 | `docs/SECURITY_ROLE_AND_AI_GOVERNANCE.md` | Negative authorization, threat-control, secure-upload, audit, candidate-review, and incident tests |
 
+## Stage 1 foundation checkpoint traceability
+
+| Foundation capability | Requirements/NFR affected | Observed evidence | Status |
+|---|---|---|---|
+| Repository and local control boundary | NFR-OPS-001, NFR-SEC-001 | Clean `main`, local exclusions, no tracked governance-pack paths | Pass |
+| Backend quality and migration safety | NFR-SEC-001, NFR-OPS-002 | Ruff, Django checks, migration drift check, and 7 backend tests | Pass |
+| Frontend foundation quality | NFR-A11Y-001 to NFR-A11Y-005, NFR-PERF-001 | 8 tests, typecheck, lint, and build passed in S1-07; clean reinstall currently blocked | Limited pass |
+| Local database and worker foundation | NFR-RES-001, NFR-OPS-003 | MySQL service and prior MySQL-backed checks; Celery eager/memory tests; Redis unavailable | Limited pass |
+| Reproducible Windows workflow and CI | NFR-OPS-001 to NFR-OPS-006 | Setup/status/check scripts and GitHub Actions workflow present and reviewed | Pass; remote run pending |
+
+Checkpoint evidence is recorded in `docs/STAGE_1_FOUNDATION_CHECKPOINT.md`. Remaining performance, recovery, live-worker, browser-session, and production-security evidence is intentionally deferred to the stages where those capabilities exist.
+
 ## Stage 0 checkpoint traceability
 
 | Quality gate area | Stage 0 evidence | Runtime status |
