@@ -1,7 +1,7 @@
 # Stage 2 Internal Application Shell
 
 **Work package:** S2-07 — Build Internal Application Shell  
-**Status:** Implemented; approval and browser visual verification pending  
+**Status:** Approved by team on 2026-07-17; browser visual verification pending
 **Date:** 2026-07-17
 
 ## Implemented capability
@@ -40,11 +40,9 @@ The current preview uses local hash destinations because the approved `/app/*` r
 
 The in-app browser runtime reported no available browser session. Desktop, tablet, mobile, zoom, forced-color, and visual-focus inspection therefore remain required at the Stage 2 checkpoint.
 
-## Approval gate
+## Approval outcome
 
-Stop until the team provides:
-
-`APPROVE INTERNAL APP SHELL`
+The team provided `APPROVE INTERNAL APP SHELL` on 2026-07-17.
 
 Exact next external prompt after approval:
 

@@ -2,6 +2,7 @@
 @import "./components/forms/forms.css";
 @import "./components/data-feedback/data-feedback.css";
 @import "./components/shell/shell.css";
+@import "./components/public-shell/public-shell.css";
 
 :root {
   font-family: var(--font-family-sans);
@@ -32,6 +33,10 @@ body {
 }
 
 body[data-navigation-open="true"] {
+  overflow: hidden;
+}
+
+body[data-public-navigation-open="true"] {
   overflow: hidden;
 }
 

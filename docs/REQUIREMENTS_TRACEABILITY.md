@@ -134,6 +134,15 @@ Checkpoint evidence is recorded in `docs/STAGE_1_FOUNDATION_CHECKPOINT.md`. Rema
 | Keyboard-safe responsive navigation and route focus | NFR-A11Y-001, NFR-A11Y-002, NFR-A11Y-004 | Inert closed sidebar, opening fallback focus, Escape/close/scrim restoration, and route-heading focus tests | Implemented; browser review pending |
 | Explicit workspace loading, error, and permission-denied boundaries | Cross-cutting state rules; NFR-A11Y-001, NFR-RES-003 | Shared `ApplicationState` boundary and retry tests | Implemented; API error mapping pending |
 
+## Stage 2 public portal shell traceability
+
+| Public-shell obligation | Source requirement/NFR | Evidence | Status |
+|---|---|---|---|
+| Separate public trust, route, and navigation boundary | FR-701; NFR-SEC-001, NFR-PRIV-001, NFR-PRIV-002 | `/public` App branch, public-only shell landmarks/navigation, and public/internal isolation test | Shell implemented; router/API isolation pending |
+| Safe reporting, tracking, privacy, help, and emergency language | FR-701; NFR-SEC-005, NFR-PRIV-002 | Approved public destinations, no-secret URL tests, privacy reminder, emergency limitation, and inactive-workflow copy | Implemented without submission behavior |
+| Reviewed-language availability rather than fabricated localization | Public multilingual mission; NFR-A11Y-001 | English enabled, Twi disabled with accessible unavailable description, and language-choice tests | Foundation implemented; Twi translation/review pending |
+| Mobile-first public navigation and complete page states | Cross-cutting state rules; NFR-A11Y-001 to NFR-A11Y-004, NFR-RES-003 | Inert compact navigation, focus restoration, title/focus tests, six public states, and responsive CSS contracts | Implemented; browser review pending |
+
 ## Stage 0 checkpoint traceability
 
 | Quality gate area | Stage 0 evidence | Runtime status |

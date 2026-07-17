@@ -1,10 +1,10 @@
 # Project Progress
 
 **Current phase:** Stage 2 - Enterprise UI/UX Foundation
-**Current work package:** S2-07 - Build Internal Application Shell
+**Current work package:** S2-08 - Build Public Portal Shell
 **Repository:** `sentinel-intelligence-platform`
-**Implementation:** Responsive, capability-informed internal shell and navigation implemented
-**Approval state:** Internal AppShell approval pending; browser visual check deferred
+**Implementation:** Separate mobile-first public shell, language, privacy, and navigation foundation implemented
+**Approval state:** Public portal design approval pending; browser visual check deferred
 
 ## Completed work packages
 
@@ -34,8 +34,9 @@
 | S2-04 | `85aa9ca` | Semantic states, focus-managed compact navigation, contrast preferences, and responsive foundations implemented |
 | S2-05 | `4f846de` | Shared buttons, fields, validation, upload states, and keyboard-safe confirmation implemented and approved |
 | S2-06 | `d9e3045` | Shared cards, metrics, badges, tables, filters, pagination, overlays, alerts, and states implemented |
-| S2-07 | Current change | Responsive capability-informed internal shell, navigation, context, workspace states, and focus behavior implemented |
+| S2-07 | `aa00718` | Responsive capability-informed internal shell, navigation, context, workspace states, and focus behavior implemented and approved |
+| S2-08 | Current change | Separate mobile-first public layout, shallow navigation, language availability, privacy boundary, and safe states implemented |
 
 ## Next gate
 
-Request `APPROVE INTERNAL APP SHELL`. After approval, begin `prompts/03_stage2_ui_ux/S2-08_BUILD_PUBLIC_PORTAL_SHELL.md`.
+Request `APPROVE PUBLIC PORTAL DESIGN`. After approval, begin `prompts/03_stage2_ui_ux/S2-09_DEFINE_DASHBOARD_DATA_ARCHITECTURE.md`.

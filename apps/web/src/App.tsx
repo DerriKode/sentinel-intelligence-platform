@@ -1,6 +1,7 @@
 import { useRef, useState, type FormEvent } from "react";
 import { DataFeedbackPreview } from "./components/data-feedback";
 import { Button, FormComponentPreview, TextField } from "./components/forms";
+import { PublicPortalPreview } from "./components/public-shell";
 import {
   InternalAppShell,
   type InternalNavigationGroup
@@ -111,7 +112,7 @@ const previewUser = {
   organizationLabel: "Synthetic operations context"
 };
 
-function App() {
+function InternalFoundationPreview() {
   const [activeState, setActiveState] = useState<FoundationState>("success");
   const [activeHref, setActiveHref] = useState("#foundation");
   const [workspaceLabel, setWorkspaceLabel] = useState("");
@@ -239,6 +240,12 @@ function App() {
       <DataFeedbackPreview />
     </InternalAppShell>
   );
+}
+
+function App() {
+  return window.location.pathname.startsWith("/public")
+    ? <PublicPortalPreview />
+    : <InternalFoundationPreview />;
 }
 
 export default App;

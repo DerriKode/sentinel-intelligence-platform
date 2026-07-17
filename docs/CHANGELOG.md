@@ -70,3 +70,12 @@ No application source, package dependency, runtime configuration, production dat
 - Added inert compact navigation, first-authorized-link or close-control focus, Escape/close/scrim focus restoration, and route-selection focus transfer.
 - Added 10 focused shell tests; the full 63-test suite, lint, typecheck, and 51-module production build pass.
 - Recorded that HTTP verification passed while desktop/tablet/mobile browser visual inspection remains pending because no browser session was connected.
+
+## 2026-07-17 - Stage 2 public portal shell
+
+- Recorded `APPROVE INTERNAL APP SHELL` and continued only to the separate public-layout scope.
+- Added a reusable mobile-first public shell and `/public` preview with public-only branding, shallow navigation, emergency limitation, privacy reminder, page states, and support footer.
+- Added an availability-aware language foundation: English is enabled, while Twi is explicitly disabled and described as not yet available.
+- Preserved the public/internal trust boundary and safe URL rules; no staff context, internal records, identifiers, tracking secrets, forms, API calls, analytics, storage, or fabricated translations were introduced.
+- Added inert compact navigation, first-link focus, Escape/close/scrim restoration, current-route semantics, public document titles, and route-heading focus.
+- Added 15 focused tests; the full 78-test suite, lint, typecheck, and 54-module production build pass. `/public` returned HTTP 200; browser visual inspection remains pending.

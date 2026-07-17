@@ -36,6 +36,7 @@ The checkpoint does not claim production readiness or outcomes that were not mea
 | Reusable form/action interaction design | `STAGE_2_FORM_AND_ACTION_COMPONENTS.md`, focused component tests | Native controls, validation, upload states, and confirmation behavior observed |
 | Reusable data and feedback interaction design | `STAGE_2_DATA_AND_FEEDBACK_COMPONENTS.md`, focused component tests | Table, filter, pagination, state, alert, dialog, and drawer behavior observed |
 | Permission-aware internal workspace composition | `STAGE_2_INTERNAL_APPLICATION_SHELL.md`, focused shell/application tests | Capability filtering, context, landmarks, workspace states, compact navigation, and focus behavior observed |
+| Separate privacy-aware public service composition | `STAGE_2_PUBLIC_PORTAL_SHELL.md`, focused public-shell/application tests | Public/internal isolation, shallow safe routes, language availability, privacy/emergency copy, states, mobile navigation, and focus behavior observed |
 | Honest evaluation limitations | Stage 2 documents and `RISK_REGISTER.md` | Browser visual inspection and server-side upload enforcement remain explicit future evidence |
 
 Evidence must be observed, dated, reproducible, and linked to a requirement or budget. No screenshot, runtime result, API example, migration, or performance claim is invented at this checkpoint.
