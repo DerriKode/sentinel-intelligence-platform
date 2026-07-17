@@ -122,9 +122,11 @@
   --motion-duration-fast: 160ms;
   --motion-duration-base: 180ms;
   --motion-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --opacity-disabled: 0.55;
 
   /* Breakpoint references. CSS media queries repeat these values because var() is invalid in conditions. */
   --breakpoint-min: 20rem;
+  --breakpoint-narrow: 24rem;
   --breakpoint-mobile: 40rem;
   --breakpoint-tablet: 52.5rem;
   --breakpoint-wide: 90rem;
@@ -137,6 +139,7 @@
   --layout-heading-max: 45rem;
   --layout-copy-max: 40rem;
   --layout-control-min-height: 2.75rem;
+  --layout-control-comfortable: 3rem;
   --layout-gutter: clamp(var(--space-4), 4vw, var(--space-16));
   --layout-section-space: clamp(var(--space-10), 6vw, var(--space-22));
   --layout-panel-space: clamp(var(--space-5), 3vw, var(--space-8));

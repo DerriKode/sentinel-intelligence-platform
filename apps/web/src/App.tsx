@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 
 type FoundationState = "loading" | "empty" | "error" | "success" | "denied" | "validation";
 
@@ -44,18 +44,102 @@ const stateContent: Record<FoundationState, { kicker: string; title: string; mes
   }
 };
 
+const compactNavigationQuery = "(max-width: 52.5rem)";
+
+function useMediaQuery(query: string) {
+  const [matches, setMatches] = useState(() => window.matchMedia?.(query).matches ?? false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia?.(query);
+    if (!mediaQuery) {
+      return;
+    }
+
+    function handleChange(event: MediaQueryListEvent) {
+      setMatches(event.matches);
+    }
+
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, [query]);
+
+  return matches;
+}
+
 function App() {
   const [activeState, setActiveState] = useState<FoundationState>("success");
   const [menuOpen, setMenuOpen] = useState(false);
   const [workspaceLabel, setWorkspaceLabel] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const isCompactNavigation = useMediaQuery(compactNavigationQuery);
+  const menuToggleRef = useRef<HTMLButtonElement>(null);
+  const firstNavigationLinkRef = useRef<HTMLAnchorElement>(null);
+  const workspaceInputRef = useRef<HTMLInputElement>(null);
+  const restoreMenuFocusRef = useRef(false);
   const content = stateContent[activeState];
   const isInvalid = submitted && workspaceLabel.trim().length === 0;
+
+  useEffect(() => {
+    if (!isCompactNavigation || !menuOpen) {
+      return;
+    }
+
+    document.body.dataset.navigationOpen = "true";
+    const focusTimer = window.setTimeout(() => firstNavigationLinkRef.current?.focus(), 0);
+
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        restoreMenuFocusRef.current = true;
+        setMenuOpen(false);
+      }
+    }
+
+    document.addEventListener("keydown", handleEscape);
+
+    return () => {
+      window.clearTimeout(focusTimer);
+      document.removeEventListener("keydown", handleEscape);
+      delete document.body.dataset.navigationOpen;
+
+      if (restoreMenuFocusRef.current) {
+        restoreMenuFocusRef.current = false;
+        menuToggleRef.current?.focus();
+      }
+    };
+  }, [isCompactNavigation, menuOpen]);
+
+  useEffect(() => {
+    if (!isCompactNavigation && menuOpen) {
+      restoreMenuFocusRef.current = false;
+      setMenuOpen(false);
+    }
+  }, [isCompactNavigation, menuOpen]);
+
+  function closeNavigation(restoreFocus: boolean) {
+    restoreMenuFocusRef.current = restoreFocus;
+    setMenuOpen(false);
+  }
+
+  function toggleNavigation() {
+    if (menuOpen) {
+      closeNavigation(true);
+      return;
+    }
+
+    restoreMenuFocusRef.current = false;
+    setMenuOpen(true);
+  }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setSubmitted(true);
-    setActiveState(workspaceLabel.trim() ? "success" : "validation");
+    const isValid = workspaceLabel.trim().length > 0;
+    setActiveState(isValid ? "success" : "validation");
+
+    if (!isValid) {
+      workspaceInputRef.current?.focus();
+    }
   }
 
   function chooseState(state: FoundationState) {
@@ -69,7 +153,13 @@ function App() {
         Skip to main content
       </a>
 
-      <aside id="application-navigation" className={`sidebar${menuOpen ? " sidebar--open" : ""}`} aria-label="Application navigation">
+      <aside
+        id="application-navigation"
+        className={`sidebar${menuOpen ? " sidebar--open" : ""}`}
+        aria-hidden={isCompactNavigation && !menuOpen ? true : undefined}
+        aria-label="Application navigation"
+        inert={isCompactNavigation && !menuOpen ? true : undefined}
+      >
         <div className="brand-lockup">
           <span className="brand-mark" aria-hidden="true">SI</span>
           <span>
@@ -79,15 +169,21 @@ function App() {
         </div>
 
         <nav className="primary-nav" aria-label="Primary navigation">
-          <a className="nav-link nav-link--active" href="#foundation" aria-current="page" onClick={() => setMenuOpen(false)}>
+          <a
+            ref={firstNavigationLinkRef}
+            className="nav-link nav-link--active"
+            href="#foundation"
+            aria-current="page"
+            onClick={() => closeNavigation(false)}
+          >
             <span aria-hidden="true">01</span>
             Foundation
           </a>
-          <a className="nav-link" href="#access-posture" onClick={() => setMenuOpen(false)}>
+          <a className="nav-link" href="#access-posture" onClick={() => closeNavigation(false)}>
             <span aria-hidden="true">02</span>
             Access posture
           </a>
-          <a className="nav-link" href="#setup-notes" onClick={() => setMenuOpen(false)}>
+          <a className="nav-link" href="#setup-notes" onClick={() => closeNavigation(false)}>
             <span aria-hidden="true">03</span>
             Setup notes
           </a>
@@ -102,16 +198,26 @@ function App() {
         </div>
       </aside>
 
-      {menuOpen && <button className="nav-scrim" type="button" aria-label="Close navigation" onClick={() => setMenuOpen(false)} />}
+      {isCompactNavigation && menuOpen && (
+        <button
+          className="nav-scrim"
+          type="button"
+          aria-label="Dismiss navigation"
+          onClick={() => closeNavigation(true)}
+        />
+      )}
 
       <div className="main-column">
         <header className="topbar">
           <button
+            ref={menuToggleRef}
             className="menu-toggle"
             type="button"
             aria-controls="application-navigation"
             aria-expanded={menuOpen}
-            onClick={() => setMenuOpen((open) => !open)}
+            aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+            hidden={!isCompactNavigation}
+            onClick={toggleNavigation}
           >
             Menu
           </button>
@@ -121,7 +227,7 @@ function App() {
           </div>
         </header>
 
-        <main id="main-content" className="main-content">
+        <main id="main-content" className="main-content" tabIndex={-1}>
           <section className="page-heading" aria-labelledby="page-title">
             <p className="eyebrow">Platform foundation</p>
             <h1 id="page-title">A dependable shell for public-safety work.</h1>
@@ -156,8 +262,10 @@ function App() {
 
             <div
               className={`state-card state-card--${activeState}`}
-              role={activeState === "error" ? "alert" : activeState === "loading" ? "status" : undefined}
-              aria-live="polite"
+              role={activeState === "error" ? "alert" : "status"}
+              aria-atomic="true"
+              aria-busy={activeState === "loading"}
+              aria-live={activeState === "error" ? "assertive" : "polite"}
             >
               <span className="state-marker" aria-hidden="true">{activeState === "success" ? "OK" : "--"}</span>
               <div>
@@ -180,6 +288,7 @@ function App() {
                 <label className="field-label" htmlFor="workspace-label">Workspace label</label>
                 <div className="field-row">
                   <input
+                    ref={workspaceInputRef}
                     id="workspace-label"
                     name="workspaceLabel"
                     value={workspaceLabel}

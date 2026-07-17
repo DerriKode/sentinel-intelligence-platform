@@ -98,6 +98,15 @@ Checkpoint evidence is recorded in `docs/STAGE_1_FOUNDATION_CHECKPOINT.md`. Rema
 | Responsive spacing, typography, breakpoints, and layout | NFR-A11Y-004, NFR-PERF-002 | Central type/layout tokens and 320 px/mobile/tablet foundations | Implemented; viewport review required |
 | Dependency-free and operationally safe fonts | NFR-OPS-001, NFR-PERF-002, NFR-PRIV-002 | System font stack with no external request or package | Implemented |
 
+## Stage 2 accessibility and responsive traceability
+
+| Foundation obligation | Source requirement/NFR | Evidence | Status |
+|---|---|---|---|
+| Semantic state announcements and validation focus | Cross-cutting state rules; NFR-A11Y-001, NFR-A11Y-002 | `App.tsx`, 9 application/accessibility tests | Implemented |
+| Keyboard-safe compact navigation and focus restoration | Information-architecture navigation contract; NFR-A11Y-001, NFR-A11Y-002 | `inert`, managed focus, Escape/scrim tests | Implemented |
+| Contrast and user preferences | NFR-A11Y-001, NFR-A11Y-003 | 4.5:1 token tests, increased/forced contrast, reduced motion | Implemented; visual review pending |
+| Tablet/mobile and coarse-input behavior | NFR-A11Y-002, NFR-A11Y-004 | 320 px/narrow/mobile/tablet CSS, overflow rules, 48 px coarse targets | Implemented; viewport review pending |
+
 ## Stage 0 checkpoint traceability
 
 | Quality gate area | Stage 0 evidence | Runtime status |

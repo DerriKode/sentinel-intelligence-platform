@@ -38,3 +38,10 @@ No application source, package dependency, runtime configuration, production dat
 - Refactored the global shell and state styles to consume shared semantic tokens without changing application behavior.
 - Added token-contract tests for required families, state/focus semantics, raw component colors, breakpoint alignment, and reduced motion.
 - Kept the system font stack dependency-free and documented native CSS media-query token limitations.
+
+## 2026-07-17 - Stage 2 accessibility and responsive foundations
+
+- Added atomic status/busy semantics and validation focus behavior to the foundation states.
+- Made closed compact navigation inert, managed opening focus, and restored trigger focus after Escape, close, or scrim dismissal.
+- Added overflow-safe text/media, background scroll locking, coarse-pointer targets, increased/forced contrast, narrow-mobile, and strengthened reduced-motion rules.
+- Added targeted keyboard, focus, state-announcement, CSS preference, and responsive-foundation tests.

@@ -1,7 +1,7 @@
 # User, API, and Operations Documentation Status
 
-**Checkpoint:** S2-03
-**Status:** Design direction and information architecture locked; token implementation recorded
+**Checkpoint:** S2-04
+**Status:** Accessibility and responsive foundations implemented; browser visual check pending
 
 ## Available now
 
@@ -12,6 +12,7 @@
 - Shared visual personality, interaction principles, prohibited patterns, state requirements, and UI privacy/security guardrails are documented in `STAGE_2_DESIGN_DIRECTION.md`.
 - Internal/public navigation, canonical route hierarchies, role visibility, safe route outcomes, and route verification obligations are documented in `STAGE_2_INFORMATION_ARCHITECTURE.md`.
 - Central colors, typography, spacing, shape, motion, breakpoint references, layout values, accessibility rationale, verification, and limitations are documented in `STAGE_2_DESIGN_TOKENS_AND_TYPOGRAPHY.md`.
+- Semantic state announcements, keyboard/focus behavior, contrast preferences, touch targets, reduced motion, and tablet/mobile foundations are documented in `STAGE_2_ACCESSIBILITY_AND_RESPONSIVE_FOUNDATIONS.md`.
 
 ## Deferred until foundation and workflow implementation
 
@@ -22,6 +23,6 @@
 | Operations documentation | Local setup, status, health-check, and service boundaries recorded | Monitoring, backup/restore, incident, deployment, and rollback runbooks |
 | Accessibility evidence | Source tests and responsive/reduced-motion rules recorded; browser session deferred | Keyboard, screen-reader, responsive, contrast, and browser evidence |
 
-The Stage 2 design direction is approved. Accessibility/responsive components, shells, navigation, shared states, and role-specific pages remain deferred to the following work packages.
+The Stage 2 design direction is approved. Shared form/action components, shells, navigation, shared states, and role-specific pages remain deferred to the following work packages.
 
 No documentation gap blocks design-direction approval; downstream artifacts must not be fabricated before the underlying behavior exists.

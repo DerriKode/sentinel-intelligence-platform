@@ -66,12 +66,24 @@ describe("design token contract", () => {
   });
 
   it("preserves tablet, mobile, and reduced-motion foundations", () => {
+    expect(tokens).toContain("--breakpoint-narrow: 24rem");
     expect(tokens).toContain("--breakpoint-tablet: 52.5rem");
     expect(tokens).toContain("--breakpoint-mobile: 40rem");
     expect(globalStyles).toContain("@media (max-width: 52.5rem)");
     expect(globalStyles).toContain("@media (max-width: 40rem)");
+    expect(globalStyles).toContain("@media (max-width: 24rem)");
     expect(globalStyles).toContain("@media (prefers-reduced-motion: reduce)");
     expect(globalStyles).toContain("var(--motion-duration-instant)");
+  });
+
+  it("includes high-contrast, touch-target, overflow, and assistive-text foundations", () => {
+    expect(tokens).toContain("--layout-control-comfortable: 3rem");
+    expect(globalStyles).toContain("@media (prefers-contrast: more)");
+    expect(globalStyles).toContain("@media (forced-colors: active)");
+    expect(globalStyles).toContain("@media (pointer: coarse)");
+    expect(globalStyles).toContain('body[data-navigation-open="true"]');
+    expect(globalStyles).toContain(".visually-hidden");
+    expect(globalStyles).toContain("overflow-wrap: anywhere");
   });
 
   it.each([
