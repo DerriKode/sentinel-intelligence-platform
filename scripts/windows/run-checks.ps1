@@ -14,6 +14,10 @@ if (-not (Test-Path $pythonPath)) { throw "Backend venv is missing. Run setup.ps
 
 Push-Location (Join-Path $repoRoot "apps\api")
 try {
+    & $pythonPath -m ruff format --check .
+    if ($LASTEXITCODE -ne 0) { throw "Python format check failed." }
+    & $pythonPath -m ruff check .
+    if ($LASTEXITCODE -ne 0) { throw "Python lint check failed." }
     & $pythonPath manage.py check --settings=sentinel_api.settings.test
     if ($LASTEXITCODE -ne 0) { throw "Django check failed." }
     & $pythonPath manage.py makemigrations --check --dry-run --settings=sentinel_api.settings.test

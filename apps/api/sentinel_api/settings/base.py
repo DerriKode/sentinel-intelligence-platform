@@ -3,7 +3,6 @@ from pathlib import Path
 
 from django.core.exceptions import ImproperlyConfigured
 
-
 BASE_DIR = Path(__file__).resolve().parents[2]
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "development-only-change-me")
@@ -37,6 +36,7 @@ TEMPLATES = [
 ]
 WSGI_APPLICATION = "sentinel_api.wsgi.application"
 ASGI_APPLICATION = "sentinel_api.asgi.application"
+
 
 def mysql_database_from_environment(test_name: str | None = None) -> dict:
     """Build a MySQL connection without placing credentials in source control."""

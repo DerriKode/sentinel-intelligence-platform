@@ -7,14 +7,20 @@ from core.models import Organization, Unit
 
 class OrganizationUnitModelTests(TestCase):
     def test_unit_is_owned_by_its_organization(self):
-        organization = Organization.objects.create(name="Central Operations", slug="central-operations")
-        unit = Unit.objects.create(organization=organization, name="Investigations", slug="investigations")
+        organization = Organization.objects.create(
+            name="Central Operations", slug="central-operations"
+        )
+        unit = Unit.objects.create(
+            organization=organization, name="Investigations", slug="investigations"
+        )
 
         self.assertEqual(unit.organization_id, organization.id)
         self.assertEqual(list(organization.units.all()), [unit])
 
     def test_unit_slug_is_unique_within_an_organization(self):
-        organization = Organization.objects.create(name="Central Operations", slug="central-operations")
+        organization = Organization.objects.create(
+            name="Central Operations", slug="central-operations"
+        )
         Unit.objects.create(organization=organization, name="Investigations", slug="investigations")
 
         with self.assertRaises(IntegrityError):
@@ -30,7 +36,9 @@ class OrganizationUnitModelTests(TestCase):
         self.assertEqual(Unit.objects.filter(slug="investigations").count(), 2)
 
     def test_organization_deletion_is_protected_while_units_exist(self):
-        organization = Organization.objects.create(name="Central Operations", slug="central-operations")
+        organization = Organization.objects.create(
+            name="Central Operations", slug="central-operations"
+        )
         Unit.objects.create(organization=organization, name="Investigations", slug="investigations")
 
         with self.assertRaises(ProtectedError):

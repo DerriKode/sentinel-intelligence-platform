@@ -27,4 +27,6 @@ def readiness(request):
             status=503,
         )
 
-    return Response({"status": "ready", "service": "sentinel-api", "database": "ok", "version": "v1"})
+    return Response(
+        {"status": "ready", "service": "sentinel-api", "database": "ok", "version": "v1"}
+    )
