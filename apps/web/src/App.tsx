@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import { Button, FormComponentPreview, TextField } from "./components/forms";
 
 type FoundationState = "loading" | "empty" | "error" | "success" | "denied" | "validation";
 
@@ -187,6 +188,10 @@ function App() {
             <span aria-hidden="true">03</span>
             Setup notes
           </a>
+          <a className="nav-link" href="#form-components" onClick={() => closeNavigation(false)}>
+            <span aria-hidden="true">04</span>
+            Form components
+          </a>
         </nav>
 
         <div className="sidebar-footer">
@@ -285,22 +290,21 @@ function App() {
                 </div>
               </div>
               <form onSubmit={handleSubmit} noValidate>
-                <label className="field-label" htmlFor="workspace-label">Workspace label</label>
-                <div className="field-row">
-                  <input
-                    ref={workspaceInputRef}
-                    id="workspace-label"
-                    name="workspaceLabel"
-                    value={workspaceLabel}
-                    onChange={(event) => setWorkspaceLabel(event.target.value)}
-                    aria-invalid={isInvalid}
-                    aria-describedby={isInvalid ? "workspace-error workspace-help" : "workspace-help"}
-                    placeholder="e.g. Central operations"
-                  />
-                  <button className="button button--primary" type="submit">Save placeholder</button>
+                <TextField
+                  ref={workspaceInputRef}
+                  id="workspace-label"
+                  name="workspaceLabel"
+                  label="Workspace label"
+                  description="This foundation action is local only; no data is sent to an API."
+                  error={isInvalid ? "Enter a workspace label before continuing." : undefined}
+                  required
+                  value={workspaceLabel}
+                  onChange={(event) => setWorkspaceLabel(event.target.value)}
+                  placeholder="e.g. Central operations"
+                />
+                <div className="form-actions form-actions--spaced">
+                  <Button type="submit">Save placeholder</Button>
                 </div>
-                {isInvalid && <p className="field-error" id="workspace-error" role="alert">Enter a workspace label before continuing.</p>}
-                <p className="field-help" id="workspace-help">This foundation action is local only; no data is sent to an API.</p>
               </form>
             </section>
 
@@ -318,6 +322,8 @@ function App() {
               </ul>
             </section>
           </div>
+
+          <FormComponentPreview />
         </main>
 
         <footer className="footer">

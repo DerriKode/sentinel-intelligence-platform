@@ -28,4 +28,12 @@
 
 The checkpoint does not claim production readiness or outcomes that were not measured. Evidence remains limited to the foundation capabilities implemented at this stage.
 
+## Stage 2 evidence added
+
+| Academic expectation | Repository evidence | Status |
+|---|---|---|
+| Accessible and responsive interaction foundations | `STAGE_2_ACCESSIBILITY_AND_RESPONSIVE_FOUNDATIONS.md` | Automated semantic, keyboard, focus, preference, and responsive-rule evidence recorded |
+| Reusable form/action interaction design | `STAGE_2_FORM_AND_ACTION_COMPONENTS.md`, focused component tests | Native controls, validation, upload states, and confirmation behavior observed |
+| Honest evaluation limitations | Stage 2 documents and `RISK_REGISTER.md` | Browser visual inspection and server-side upload enforcement remain explicit future evidence |
+
 Evidence must be observed, dated, reproducible, and linked to a requirement or budget. No screenshot, runtime result, API example, migration, or performance claim is invented at this checkpoint.

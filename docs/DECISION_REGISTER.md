@@ -18,5 +18,6 @@
 | D-014 | Separate internal `/app/*` and public `/public/*` route trees; use capability-informed navigation with independent backend authorization and no sensitive values in URLs | `STAGE_2_INFORMATION_ARCHITECTURE.md` | Locked for Stage 2 |
 | D-015 | Centralize visual foundations in CSS custom properties with semantic aliases and a local/system font stack; add no font, CSS framework, or token-build dependency | `STAGE_2_DESIGN_TOKENS_AND_TYPOGRAPHY.md`, `apps/web/src/styles/tokens.css` | Implemented |
 | D-016 | Compact navigation is removed from keyboard/accessibility flow while closed and manages entry, Escape/scrim closure, and focus restoration; global styles support forced contrast, coarse input, reduced motion, and 320 px layouts | `STAGE_2_ACCESSIBILITY_AND_RESPONSIVE_FOUNDATIONS.md` | Implemented |
+| D-017 | Shared form/action primitives remain dependency-free and native-first; client validation and permission presentation are usability behavior only, while APIs retain all authorization and upload enforcement | `STAGE_2_FORM_AND_ACTION_COMPONENTS.md`, `apps/web/src/components/forms/` | Implemented; approval pending |
 
 Material changes require an architecture, security, data, or scope decision record before implementation proceeds.

@@ -45,3 +45,11 @@ No application source, package dependency, runtime configuration, production dat
 - Made closed compact navigation inert, managed opening focus, and restored trigger focus after Escape, close, or scrim dismissal.
 - Added overflow-safe text/media, background scroll locking, coarse-pointer targets, increased/forced contrast, narrow-mobile, and strengthened reduced-motion rules.
 - Added targeted keyboard, focus, state-announcement, CSS preference, and responsive-foundation tests.
+
+## 2026-07-17 - Stage 2 form and action components
+
+- Added dependency-free shared buttons, fields, selects, text areas, upload states, linked validation summaries, and confirmations.
+- Added a local-only component preview with no API, storage, authorization, or sensitive-data behavior.
+- Added keyboard focus containment and restoration, announced errors and statuses, responsive action layouts, coarse-pointer sizing, and forced-color support.
+- Recorded that client upload checks are guidance only and that all authorization, content, and file controls require server enforcement.
+- Added 8 focused component tests; the full 37-test suite, accessibility suite, lint, typecheck, and production build pass.

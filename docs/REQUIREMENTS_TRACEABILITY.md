@@ -107,6 +107,15 @@ Checkpoint evidence is recorded in `docs/STAGE_1_FOUNDATION_CHECKPOINT.md`. Rema
 | Contrast and user preferences | NFR-A11Y-001, NFR-A11Y-003 | 4.5:1 token tests, increased/forced contrast, reduced motion | Implemented; visual review pending |
 | Tablet/mobile and coarse-input behavior | NFR-A11Y-002, NFR-A11Y-004 | 320 px/narrow/mobile/tablet CSS, overflow rules, 48 px coarse targets | Implemented; viewport review pending |
 
+## Stage 2 form and action traceability
+
+| Component obligation | Source requirement/NFR | Evidence | Status |
+|---|---|---|---|
+| Native labels, descriptions, errors, and keyboard behavior | Cross-cutting acceptance rules; NFR-A11Y-001, NFR-A11Y-002 | Shared field primitives and focused component tests | Implemented |
+| Safe upload selection and explicit denied/error states | FR-102, FR-501, FR-701; NFR-SEC-001, NFR-SEC-004, NFR-PRIV-001 | `FileUploadField`, server-revalidation contract, upload-state tests | Client foundation implemented; API enforcement pending |
+| Deliberate confirmation and focus restoration | Cross-cutting destructive-action rules; NFR-A11Y-001, NFR-A11Y-002 | Modal focus containment, Escape, busy-state, and restoration tests | Implemented |
+| Responsive, contrast-aware shared actions | NFR-A11Y-001 to NFR-A11Y-004 | Tokenized CSS, narrow/coarse/forced-color rules and contract tests | Implemented; browser review pending |
+
 ## Stage 0 checkpoint traceability
 
 | Quality gate area | Stage 0 evidence | Runtime status |

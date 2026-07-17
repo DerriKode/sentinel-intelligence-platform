@@ -146,4 +146,5 @@
   --z-navigation-scrim: 90;
   --z-navigation: 100;
   --z-skip-link: 200;
+  --z-dialog-backdrop: 300;
 }
