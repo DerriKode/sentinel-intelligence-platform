@@ -1,0 +1,68 @@
+# Secrets and environments
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+
+# IDE and OS
+.vscode/settings.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Databases and backups
+*.sqlite3
+*.sql
+*.dump
+backups/
+restore-work/
+
+# User uploads, evidence, media and exports
+media/
+uploads/
+evidence/
+private-media/
+exports/
+tmp/
+temp/
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# AI models, caches and derived indexes
+models/
+model-cache/
+.ai-cache/
+embeddings/
+vector-index/
+
+# Logs
+*.log
+logs/
+
+# Docker/local service data
+docker-data/
+mysql-data/
+redis-data/
