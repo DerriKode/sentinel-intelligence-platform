@@ -59,3 +59,15 @@ Non-functional budgets and performance thresholds are defined provisionally in `
 | Modular monolith, module ownership, and trust boundaries | All FRs; CW-01 to CW-08 | `docs/ARCHITECTURE_AND_MODULE_BOUNDARIES.md` | Architecture review, dependency checks, API boundary tests |
 | MySQL authority, protected media, logical entities, retention, and custody | FR-301, FR-401, FR-501, FR-502, FR-1201; CW-03, CW-04, CW-08 | `docs/DATA_MODEL_AND_DATA_GOVERNANCE.md` | Migration, relationship, hash, retention, backup, and restore tests |
 | Deny-by-default roles, threats, upload, audit, and AI human review | FR-101, FR-102, FR-103, FR-501, FR-701, FR-801, FR-802, FR-901, FR-1001; CW-01, CW-02, CW-04 to CW-07 | `docs/SECURITY_ROLE_AND_AI_GOVERNANCE.md` | Negative authorization, threat-control, secure-upload, audit, candidate-review, and incident tests |
+
+## Stage 0 checkpoint traceability
+
+| Quality gate area | Stage 0 evidence | Runtime status |
+|---|---|---|
+| Functionality and acceptance | Requirements, roles, workflows, and traceability documents | Runtime not yet applicable |
+| Authorization and security | Permission model, threat controls, upload and AI governance | Runtime tests pending foundation |
+| Data integrity and privacy | Data model, classification, custody, retention, and synthetic-data rules | Runtime tests pending foundation |
+| UI/UX, accessibility, and responsive behavior | Cross-cutting requirements and NFR budgets | UI does not yet exist |
+| Performance, resilience, and operations | 31 provisional budgets and recovery/operations evidence requirements | Measurement pending foundation |
+| Academic evidence and documentation | `docs/ACADEMIC_EVIDENCE_BASELINE.md`, progress, changelog, decisions, risks, documentation status | Implementation evidence pending |
+| Git safety and external control | Clean branch, exclusions, genuine docs only, external pack outside repository | Verified at checkpoint |
