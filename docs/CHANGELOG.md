@@ -61,3 +61,12 @@ No application source, package dependency, runtime configuration, production dat
 - Added a clearly synthetic local preview for filtering, pagination, status, dialog, and drawer behavior without API or storage operations.
 - Added keyboard focus containment/restoration, Escape behavior, safe empty/error/denied states, 48 px coarse targets, and forced-color support.
 - Added 16 focused tests; the full 53-test suite, accessibility suite, lint, typecheck, and production build pass.
+
+## 2026-07-17 - Stage 2 internal application shell
+
+- Recorded the prior `APPROVE COMPONENT SYSTEM` gate and continued to the internal-shell scope.
+- Extracted a reusable AppShell with grouped sidebar navigation, top-bar organization/user context, breadcrumbs, workspace heading/actions, application-state boundary, environment status, and footer.
+- Added capability-informed destination filtering, empty authorized-navigation feedback, current-destination semantics, and an explicit reminder that the API remains the authorization boundary.
+- Added inert compact navigation, first-authorized-link or close-control focus, Escape/close/scrim focus restoration, and route-selection focus transfer.
+- Added 10 focused shell tests; the full 63-test suite, lint, typecheck, and 51-module production build pass.
+- Recorded that HTTP verification passed while desktop/tablet/mobile browser visual inspection remains pending because no browser session was connected.

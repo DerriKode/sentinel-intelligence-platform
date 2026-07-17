@@ -1,10 +1,10 @@
 # Project Progress
 
 **Current phase:** Stage 2 - Enterprise UI/UX Foundation
-**Current work package:** S2-06 - Build Data and Feedback Components
+**Current work package:** S2-07 - Build Internal Application Shell
 **Repository:** `sentinel-intelligence-platform`
-**Implementation:** Shared data, feedback, overlay, and application-state components implemented
-**Approval state:** Component system approved; browser visual check deferred
+**Implementation:** Responsive, capability-informed internal shell and navigation implemented
+**Approval state:** Internal AppShell approval pending; browser visual check deferred
 
 ## Completed work packages
 
@@ -33,8 +33,9 @@
 | S2-03 | `b22c47e` | Central color, type, spacing, shape, motion, breakpoint, and layout tokens implemented |
 | S2-04 | `85aa9ca` | Semantic states, focus-managed compact navigation, contrast preferences, and responsive foundations implemented |
 | S2-05 | `4f846de` | Shared buttons, fields, validation, upload states, and keyboard-safe confirmation implemented and approved |
-| S2-06 | Current change | Shared cards, metrics, badges, tables, filters, pagination, overlays, alerts, and states implemented |
+| S2-06 | `d9e3045` | Shared cards, metrics, badges, tables, filters, pagination, overlays, alerts, and states implemented |
+| S2-07 | Current change | Responsive capability-informed internal shell, navigation, context, workspace states, and focus behavior implemented |
 
 ## Next gate
 
-Begin `prompts/03_stage2_ui_ux/S2-07_BUILD_INTERNAL_APPLICATION_SHELL.md`.
+Request `APPROVE INTERNAL APP SHELL`. After approval, begin `prompts/03_stage2_ui_ux/S2-08_BUILD_PUBLIC_PORTAL_SHELL.md`.

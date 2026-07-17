@@ -27,7 +27,10 @@ describe("frontend foundation", () => {
   it("provides a named main landmark, skip link, and keyboard-reachable state controls", () => {
     render(<App />);
 
-    expect(screen.getByRole("link", { name: "Skip to main content" })).toHaveAttribute("href", "#main-content");
+    expect(screen.getByRole("link", { name: "Skip to internal workspace" })).toHaveAttribute(
+      "href",
+      "#main-content"
+    );
     expect(screen.getByRole("main")).toHaveAttribute("id", "main-content");
     expect(screen.getByRole("main")).toHaveAttribute("tabindex", "-1");
     expect(screen.getByRole("heading", { name: "A dependable shell for public-safety work." })).toBeVisible();
@@ -92,11 +95,11 @@ describe("frontend foundation", () => {
     setCompactViewport(true);
     const user = userEvent.setup();
     render(<App />);
-    const menu = screen.getByRole("button", { name: "Open navigation" });
-    const navigation = screen.getByLabelText("Application navigation");
+    const menu = screen.getByRole("button", { name: "Open internal navigation" });
+    const navigation = screen.getByLabelText("Internal application navigation");
 
     expect(menu).toHaveAttribute("aria-expanded", "false");
-    expect(menu).toHaveAttribute("aria-controls", "application-navigation");
+    expect(menu).toHaveAttribute("aria-controls", navigation.id);
     expect(navigation).toHaveAttribute("aria-hidden", "true");
     expect(navigation).toHaveAttribute("inert");
 
@@ -108,11 +111,11 @@ describe("frontend foundation", () => {
 
     await user.keyboard("{Escape}");
     await waitFor(() => expect(menu).toHaveFocus());
-    expect(menu).toHaveAccessibleName("Open navigation");
+    expect(menu).toHaveAccessibleName("Open internal navigation");
     expect(navigation).toHaveAttribute("inert");
 
     await user.click(menu);
-    await user.click(screen.getByRole("button", { name: "Dismiss navigation" }));
+    await user.click(screen.getByRole("button", { name: "Dismiss internal navigation" }));
     await waitFor(() => expect(menu).toHaveFocus());
     expect(menu).toHaveAttribute("aria-expanded", "false");
   });

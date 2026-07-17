@@ -125,6 +125,15 @@ Checkpoint evidence is recorded in `docs/STAGE_1_FOUNDATION_CHECKPOINT.md`. Rema
 | Keyboard-safe dialogs and drawers | Cross-cutting action rules; NFR-A11Y-001, NFR-A11Y-002 | Modal naming, Tab containment, Escape, scroll lock, restoration tests | Implemented |
 | Responsive and non-color data presentation | NFR-A11Y-001 to NFR-A11Y-004, NFR-PERF-002 | Text-bearing badges, focusable table region, tablet/mobile/coarse/forced-color CSS | Implemented; browser review pending |
 
+## Stage 2 internal application shell traceability
+
+| Shell obligation | Source requirement/NFR | Evidence | Status |
+|---|---|---|---|
+| Capability-informed internal navigation with independent authorization | FR-102, FR-103, FR-201, FR-401, FR-501, FR-801, FR-802, FR-1101; NFR-SEC-001 | `InternalAppShell` capability filtering, empty-group behavior, safe denied state, and focused tests | Client presentation implemented; authenticated API/route enforcement pending |
+| Clear organization, role, route, and workspace context | FR-102, FR-201, FR-401; NFR-PRIV-001 | Display-ready synthetic context, breadcrumbs, current destination, workspace heading, and safe copy | Implemented without protected data; live context pending |
+| Keyboard-safe responsive navigation and route focus | NFR-A11Y-001, NFR-A11Y-002, NFR-A11Y-004 | Inert closed sidebar, opening fallback focus, Escape/close/scrim restoration, and route-heading focus tests | Implemented; browser review pending |
+| Explicit workspace loading, error, and permission-denied boundaries | Cross-cutting state rules; NFR-A11Y-001, NFR-RES-003 | Shared `ApplicationState` boundary and retry tests | Implemented; API error mapping pending |
+
 ## Stage 0 checkpoint traceability
 
 | Quality gate area | Stage 0 evidence | Runtime status |

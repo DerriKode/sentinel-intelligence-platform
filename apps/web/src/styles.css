@@ -1,6 +1,7 @@
 @import "./styles/tokens.css";
 @import "./components/forms/forms.css";
 @import "./components/data-feedback/data-feedback.css";
+@import "./components/shell/shell.css";
 
 :root {
   font-family: var(--font-family-sans);
